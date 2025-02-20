@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catchi - Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-white shadow">
+        <div class="container mx-auto px-4 py-3 flex items-center">
+            <img src="logo.png" alt="Logo" class="h-8 mr-2">
+            <span class="font-semibold text-xl">Catchi</span>
+        </div>
+    </nav>
+
+    <div class="container mx-auto mt-8 px-4">
+    
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg shadow p-6">
+                <h2 class="text-xl font-semibold mb-4 text-blue-600">Productos</h2>
+                <form id="productForm">
+                    <div class="mb-4">
+                        <label for="productName" class="block text-gray-700 text-sm font-bold mb-2">Nombre</label>
+                        <input type="text" id="productName" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Nombre del producto">
+                    </div>
+                    <div class="mb-4">
+                        <label for="productPrice" class="block text-gray-700 text-sm font-bold mb-2">Precio</label>
+                        <input type="number" id="productPrice" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Precio">
+                    </div>
+                    <div class="mb-4">
+                        <label for="productStock" class="block text-gray-700 text-sm font-bold mb-2">Stock</label>
+                        <input type="number" id="productStock" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Stock">
+                    </div>
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Agregar</button>
+                    <button type="button" id="clearForm" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-2">Limpiar</button>
+                </form>
+            </div>
+            <div class="col-span-2 bg-white rounded-lg shadow p-6">
+                <table class="w-full text-left table-auto">
+                    <thead>
+                        <tr>
+                            <th class="px-4 py-2">Nombre</th>
+                            <th class="px-4 py-2">Precio</th>
+                            <th class="px-4 py-2">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productList">
+                        <tr>
+                            <td class="border px-4 py-2">Control</td>
+                            <td class="border px-4 py-2">$150.00</td>
+                            <td class="border px-4 py-2">
+                                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded mr-1 edit-btn">Editar</button>
+                                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded delete-btn">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2">Videojuego</td>
+                            <td class="border px-4 py-2">$1200.00</td>
+                            <td class="border px-4 py-2">
+                                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded mr-1 edit-btn">Editar</button>
+                                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded delete-btn">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2">Silla</td>
+                            <td class="border px-4 py-2">$1500.00</td>
+                            <td class="border px-4 py-2">
+                                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded mr-1 edit-btn">Editar</button>
+                                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded delete-btn">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
